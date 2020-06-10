@@ -1,0 +1,87 @@
+body,html{
+	height: 100%;
+	background-color: #333;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #fff;
+	font-size: 20px;
+}
+.wrapper{
+	width: 400px;
+	height: 400px;
+	margin:15% auto;
+}
+.box-area{
+	animation: animate 10s ease-in-out infinite;
+	transform-style: preserve-3d;
+	transform-origin: 200px 200px 0;
+}
+
+.box-area div{
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	line-height: 400px;
+}
+.box-area .box1{
+	background-image: url(../img/bg.jpg);
+	-webkit-background-size:cover;
+	background-size: cover;
+	background-position: center; center;
+	transform:translateZ(200px);
+}
+.box-area .box2{
+	background-image: url(../img/bycicle.svg);
+	-webkit-background-size:cover;
+	background-size: cover;
+	background-position: center; center;
+	transform:rotateY(90deg) translateZ(200px);
+}
+.box-area .box3{
+	background-image: url(../img/fire.jpg);
+	-webkit-background-size:cover;
+	background-size: cover;
+	background-position: center; center;
+	transform:rotateY(90deg) rotateX(90deg) translateZ(200px);
+}
+.box-area .box4{
+	background-image: url(../img/infinite-wave.jpg);
+	-webkit-background-size:cover;
+	background-size: cover;
+	background-position: center; center;
+	transform:rotateY(180deg) rotateZ(90deg) translateZ(200px);
+}
+.box-area .box5{
+	background-image: url(../img/water.jpg);
+	-webkit-background-size:cover;
+	background-size: cover;
+	background-position: center; center;
+	transform:rotateY(-90deg) rotateZ(90deg) translateZ(200px);
+}
+.box-area .box6{
+	background-image: url(../img/wave.jpg);
+	-webkit-background-size:cover;
+	background-size: cover;
+	background-position: center; center;
+	transform: rotateX(-90deg) translateZ(200px);
+}
+
+@keyframes animate{
+	from,to{
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+	16%{
+		transform: rotateY(-90deg);
+	}
+	33%{
+		transform: rotateY(-90deg) rotateZ(90deg);
+	}
+	50%{
+		transform: rotateY(-180deg) rotateZ(90deg);
+	}
+	66%{
+		transform: rotateY(-270deg) rotateZ(90deg);
+	}
+	83%{
+		transform: rotateX(90deg);
+	}
+}
